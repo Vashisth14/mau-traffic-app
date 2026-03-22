@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constants/app_strings.dart';
 
 class ReportAccidentPage extends StatefulWidget {
   const ReportAccidentPage({super.key});
