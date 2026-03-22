@@ -1,4 +1,3 @@
 class ApiConfig {
-  // Temporarily use Facebook Graph API as base URL
-  static const String baseUrl = 'https://graph.facebook.com/v25.0';
+  static const String baseUrl = 'http://10.0.2.2:5000/api';
 }
