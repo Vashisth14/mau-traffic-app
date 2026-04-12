@@ -60,3 +60,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter
+build/
+frontend/build/
+.dart_tool/
+frontend/.dart_tool/
+
+# Node
+node_modules/
+backend/node_modules/
+
+# Secrets
+.env
+backend/.env
+
+# Uploads
+backend/uploads/
