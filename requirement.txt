@@ -1,0 +1,44 @@
+
+---
+
+# `requirements.txt`
+
+If you still want one, create it in the root and paste this:
+
+```txt
+Project: MAU-Traffic
+Type: Flutter + Node.js + MongoDB project
+
+This project does not use Python as its main stack.
+Therefore, dependencies are managed in:
+
+- frontend/pubspec.yaml
+- backend/package.json
+
+Software Requirements:
+- Flutter SDK
+- Dart SDK
+- Node.js
+- npm
+- MongoDB
+- Android Studio or VS Code
+- Git
+
+Backend Libraries:
+- express
+- mongoose
+- axios
+- cors
+- multer
+- dotenv
+
+Frontend Libraries:
+- flutter_riverpod
+- google_maps_flutter
+- image_picker
+- http
+
+Environment Requirements:
+- Facebook Graph API access token
+- MongoDB connection string
+- Internet connection for API access
