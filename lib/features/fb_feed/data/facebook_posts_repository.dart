@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../services/api_client.dart';
-import '../domain/facebook_post.dart';
+import '../domain/feed_post.dart';
 
 final facebookPostsRepositoryProvider =
     Provider<FacebookPostsRepository>((ref) {
@@ -16,7 +16,7 @@ class FacebookPostsRepository {
 
   FacebookPostsRepository(this._dio);
 
-  Future<List<FacebookPost>> fetchPosts() async {
+  Future<List<FeedPost>> fetchPosts() async {
     final response = await _dio.get(
       '/social-posts',
       options: Options(responseType: ResponseType.json),
@@ -25,18 +25,13 @@ class FacebookPostsRepository {
     final dynamic raw = response.data;
 
     final List<dynamic> dataList = raw is String
-        ? jsonDecode(raw) as List<dynamic>
-        : List<dynamic>.from(raw as List);
+        ? jsonDecode(raw)
+        : List<dynamic>.from(raw);
 
     return dataList.map((e) {
-      final map = Map<String, dynamic>.from(e as Map);
+      final map = Map<String, dynamic>.from(e);
 
-      return FacebookPost(
-        id: map['_id']?.toString() ?? '',
-        message: map['message'] ?? '',
-        createdTime: DateTime.parse(map['createdTime']),
-        fullPicture: map['imageUrl'],
-      );
+      return FeedPost.fromJson(map);
     }).toList();
   }
 }

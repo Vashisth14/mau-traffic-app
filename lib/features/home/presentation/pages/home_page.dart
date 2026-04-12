@@ -60,16 +60,12 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                   _ActionCard(
-                    title: 'Alerts',
-                    subtitle: 'Road updates in Mauritius',
-                    icon: Icons.notifications_active_rounded,
+                    title: 'Help & About',
+                    subtitle: 'Learn about the app and usage',
+                    icon: Icons.info_outline_rounded,
                     color: const Color(0xFF0A84C6),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Alerts screen coming soon'),
-                        ),
-                      );
+                      Navigator.pushNamed(context, '/about');
                     },
                   ),
                 ],
