@@ -33,6 +33,23 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Flutter
+build/
+frontend/build/
+.dart_tool/
+frontend/.dart_tool/
+
+# Node
+node_modules/
+backend/node_modules/
+
+# Secrets
+.env
+backend/.env
+
+# Uploads
+backend/uploads/
+
 # Symbolication related
 app.*.symbols
 
